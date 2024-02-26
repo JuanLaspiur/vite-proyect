@@ -19,7 +19,7 @@ const AppRouter = () => {
   return (
     <Routes>
       {/*---------- Rutas sin logueo ----------*/}
-      <Route exact path={''} element={<Login />} />
+      <Route exact path={routes.login} element={<Login />} />
       <Route element={<Layout />}>
         <Route path="" element={<ListaEventos />} />
         <Route exact path={routes.editProfile} element={<EditProfile />} />
