@@ -91,7 +91,7 @@ const drawer = ({ userInfo, setIsLogged }) => {
           <List>
             {[
               // { text: 'editar perfil', link: '/editprofile' },
-              { text: 'Cerrar session', link: '/login', onClick: handleLogout },
+              { text: 'Cerrar session', link: ' ', onClick: handleLogout }, // /login
             ].map((item) => (
               <ListItem
                 key={item.text}

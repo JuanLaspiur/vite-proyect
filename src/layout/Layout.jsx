@@ -39,7 +39,7 @@ const Layout = ({ ...rest }) => {
 
   useEffect(() => {
     if (!isLogged) {
-      navigate('/login');
+      navigate('/login'); 
     }
   }, [isLogged, location]);
 
