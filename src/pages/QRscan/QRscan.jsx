@@ -56,9 +56,10 @@ const QRscan = () => {
       justifyContent={'center'}
       alignItems={'center'}
       spacing={2}
-      sx={{ width: '80%' }}
-      margin={'10% auto'}
-      padding={'auto'}
+      sx={{ width: '100%' }}
+      margin={'10% 0'}
+      overflow={'hiden'}
+     
     >
       <select
         style={{
@@ -98,7 +99,8 @@ const QRscan = () => {
             onScan={handleScan}
             aspectRatio={'16:9'}
             style={{
-              width: '80%',
+              marginLeft: '-10%',
+              width: '110%',      
               height: '80%',
             }}
           />
