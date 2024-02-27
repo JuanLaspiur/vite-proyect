@@ -57,7 +57,7 @@ const QRscan = () => {
       alignItems={'center'}
       spacing={2}
       sx={{ width: '80%' }}
-      margin={'auto'}
+      margin={'10% auto'}
       padding={'auto'}
     >
       <select
@@ -66,6 +66,7 @@ const QRscan = () => {
           backgroundColor: '#fff',
           borderRadius: '5px',
           border: 'none',
+          color:'green'
         }}
         onChange={(e) => setFacingMode(e.target.value)}
         value={facingMode}
