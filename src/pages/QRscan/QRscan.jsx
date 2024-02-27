@@ -15,18 +15,24 @@ const QRscan = () => {
     setLoadingScan(true);
     console.log("Codigo escaneado: "+data);
 
-    //transfor value to a json
     if (data && data !== '') {
-      const json = data;//JSON.parse(data);
+      const json = JSON.parse(data);
       setStartScan(false);
       setLoadingScan(false);
       setEmail(json.email);
+      
       setEvent(json.event);
+     
       const form = {
-        event: eventqr,
-        email: emailqr,
+          event: json.event,
+          email: json.email,
       };
+
+      console.log('form '+form)
+
       const response = await putInvitation(form);
+
+
       setEmail('');
       setEvent('');
 
