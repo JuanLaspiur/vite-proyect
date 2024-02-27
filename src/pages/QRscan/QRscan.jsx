@@ -92,6 +92,7 @@ const QRscan = () => {
               height: { min: 480, ideal: 720, max: 1080 },
               facingMode: facingMode,
               aspectRatio: { ideal: 1, max: 2 },
+              mirror: false,
               //no mirror image
             }}
             delay={9000}
