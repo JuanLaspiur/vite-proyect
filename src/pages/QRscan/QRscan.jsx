@@ -11,12 +11,13 @@ const QRscan = () => {
   const [startScan, setStartScan] = useState(false);
   const [loadingScan, setLoadingScan] = useState(false);
 
-  const handleScan = async (value) => {
+  const handleScan = async (data) => {
     setLoadingScan(true);
+    console.log("Codigo escaneado: "+data);
 
     //transfor value to a json
-    if (value && value !== '') {
-      const json = JSON.parse(value);
+    if (data && data !== '') {
+      const json = JSON.parse(data);
       setStartScan(false);
       setLoadingScan(false);
       setEmail(json.email);
@@ -85,7 +86,7 @@ const QRscan = () => {
               aspectRatio: { ideal: 1, max: 2 },
               //no mirror image
             }}
-            delay={20000}
+            delay={9000}
             onError={handleError}
             onScan={handleScan}
             aspectRatio={'16:9'}
