@@ -17,7 +17,7 @@ const QRscan = () => {
 
     //transfor value to a json
     if (data && data !== '') {
-      const json = JSON.parse(data);
+      const json = data;//JSON.parse(data);
       setStartScan(false);
       setLoadingScan(false);
       setEmail(json.email);
